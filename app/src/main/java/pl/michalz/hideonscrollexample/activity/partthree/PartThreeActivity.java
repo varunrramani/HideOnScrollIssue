@@ -8,11 +8,12 @@ import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-import pl.michalz.hideonscrollexample.R;
-import pl.michalz.hideonscrollexample.fragment.PartThreeFragment;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import pl.michalz.hideonscrollexample.R;
+import pl.michalz.hideonscrollexample.fragment.PartThreeFragment;
 
 public class PartThreeActivity extends AppCompatActivity {
 
@@ -25,6 +26,14 @@ public class PartThreeActivity extends AppCompatActivity {
 
         initToolbar();
         initViewPagerAndTabs();
+        showFragment();
+    }
+
+    private void showFragment() {
+        /*FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
+        Fragment fragment = new TestFragmentThee();
+        ft.replace(R.id.content, fragment);
+        ft.commit();*/
     }
 
     private void initToolbar() {

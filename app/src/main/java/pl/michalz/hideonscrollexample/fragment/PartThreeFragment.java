@@ -8,11 +8,12 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import pl.michalz.hideonscrollexample.R;
-import pl.michalz.hideonscrollexample.adapter.parttwo.RecyclerAdapter;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import pl.michalz.hideonscrollexample.R;
+import pl.michalz.hideonscrollexample.adapter.parttwo.RecyclerAdapter;
 
 public class PartThreeFragment extends Fragment {
 
@@ -29,10 +30,13 @@ public class PartThreeFragment extends Fragment {
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        RecyclerView recyclerView = (RecyclerView) inflater.inflate(
+        /*RecyclerView recyclerView = (RecyclerView) inflater.inflate(
                 R.layout.fragment_part_three, container, false);
+        setupRecyclerView(recyclerView);*/
+        View view = inflater.inflate(R.layout.fragment_part_three, container, false);
+        RecyclerView recyclerView = (RecyclerView) view.findViewById(R.id.recyclerView);
         setupRecyclerView(recyclerView);
-        return recyclerView;
+        return view;
     }
 
     private void setupRecyclerView(RecyclerView recyclerView) {

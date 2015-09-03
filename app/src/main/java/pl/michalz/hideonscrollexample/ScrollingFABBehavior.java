@@ -24,11 +24,11 @@ public class ScrollingFABBehavior extends CoordinatorLayout.Behavior<RelativeLay
     public boolean onDependentViewChanged(CoordinatorLayout parent, RelativeLayout fab, View dependency) {
         boolean returnValue = super.onDependentViewChanged(parent, fab, dependency);
         if (dependency instanceof AppBarLayout) {
-                CoordinatorLayout.LayoutParams lp = (CoordinatorLayout.LayoutParams) fab.getLayoutParams();
-                int fabBottomMargin = lp.bottomMargin;
-                int distanceToScroll = fab.getHeight() + fabBottomMargin;
-                float ratio = (float)dependency.getY()/(float)toolbarHeight;
-                fab.setTranslationY(-distanceToScroll * ratio);
+            CoordinatorLayout.LayoutParams lp = (CoordinatorLayout.LayoutParams) fab.getLayoutParams();
+            int fabBottomMargin = lp.bottomMargin;
+            int distanceToScroll = fab.getHeight() + fabBottomMargin;
+            float ratio = (float) dependency.getY() / (float) toolbarHeight;
+            fab.setTranslationY(-distanceToScroll * ratio);
         }
         return returnValue;
     }
